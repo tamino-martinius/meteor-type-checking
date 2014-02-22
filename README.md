@@ -1,5 +1,6 @@
 # type-checking
 [![Build Status](https://travis-ci.org/Zaku-eu/meteor-type-checking.png?branch=master)](https://travis-ci.org/Zaku-eu/meteor-type-checking)
+
 type-checking for string, number, function and array.
 
 ## isNumber
