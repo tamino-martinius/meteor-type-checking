@@ -1,0 +1,41 @@
+Tinytest.add "type-checking - isNumber", (test) ->
+  test.equal(isNumber(0), true)
+  test.equal(isNumber(1), true)
+  test.equal(isNumber(-1), true)
+  test.equal(isNumber(NaN), true)
+  test.equal(isNumber(Infinity), true)
+  test.equal(isNumber("0"), false)
+  test.equal(isNumber("1"), false)
+  test.equal(isNumber("-1"), false)
+  test.equal(isNumber(null), false)
+  test.equal(isNumber(true), false)
+  test.equal(isNumber(false), false)
+  test.equal(isNumber(undefined), false)
+
+Tinytest.add "type-checking - isString", (test) ->
+  test.equal(isString(""), true)
+  test.equal(isString("true"), true)
+  test.equal(isString("false"), true)
+  test.equal(isString("1"), true)
+  test.equal(isString("0"), true)
+  test.equal(isString(new String()), true)
+  test.equal(isString(new String("")), true)
+  test.equal(isString(new String(null)), true)
+  test.equal(isString(0), false)
+  test.equal(isString(1), false)
+  test.equal(isString(-1), false)
+  test.equal(isString(null), false)
+  test.equal(isString(undefined), false)
+
+Tinytest.add "type-checking - isFunction", (test) ->
+  test.equal(isFunction(->), true)
+  test.equal(isFunction(-> false), true)
+  test.equal(isFunction(-> true), true)
+  test.equal(isFunction(null), false)
+  test.equal(isFunction(undefined), false)
+
+Tinytest.add "type-checking - isArray", (test) ->
+  test.equal(isArray([]), true)
+  test.equal(isArray(new Array), true)
+  test.equal(isArray(null), false)
+  test.equal(isArray(undefined), false)
