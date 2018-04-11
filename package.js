@@ -1,7 +1,7 @@
 Package.describe({
   name: 'zaku:type-checking',
   summary: 'type-checking for string, number, function and array.',
-  version: '0.1.0',
+  version: '0.2.0',
   git: 'https://github.com/tamino-martinius/meteor-type-checking.git'
 });
 
