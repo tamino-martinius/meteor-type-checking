@@ -6,6 +6,7 @@ Package.describe({
 });
 
 Package.onUse(function (api) {
+  api.versionsFrom('METEOR@0.9.0');
   api.use('coffeescript@1.0.17', ['client', 'server']);
   api.addFiles('type-checking.coffee', ['client', 'server']);
 });
