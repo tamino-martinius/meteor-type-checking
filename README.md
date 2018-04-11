@@ -1,11 +1,12 @@
 # type-checking
-[![Build Status](https://travis-ci.org/Zaku-eu/meteor-type-checking.png?branch=master)](https://travis-ci.org/Zaku-eu/meteor-type-checking)
+
+[![Build Status](https://travis-ci.org/tamino-martinius/meteor-type-checking.png?branch=master)](https://travis-ci.org/tamino-martinius/meteor-type-checking)
 
 type-checking for string, number, function and array.
 
 ## isNumber
 
-```
+```js
   isNumber(0);                // true
   isNumber(1);                // true
   isNumber(-1);               // true
@@ -22,7 +23,7 @@ type-checking for string, number, function and array.
 
 ## isString
 
-```
+```js
   isString("");               // true
   isString("true");           // true
   isString("false");          // true
@@ -40,7 +41,7 @@ type-checking for string, number, function and array.
 
 ## isFunction
 
-```
+```js
   isFunction(->);             // true
   isFunction(-> false);       // true
   isFunction(-> true);        // true
@@ -50,7 +51,7 @@ type-checking for string, number, function and array.
 
 ## isArray
 
-```
+```js
   isArray([]);                // true
   isArray(new Array);         // true
   isArray(null);              // false
