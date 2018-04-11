@@ -1,18 +1,21 @@
 Package.describe({
-    summary: 'type-checking for string, number, function and array.'
-});
- 
-Package.on_use(function (api) {
-  api.use('coffeescript',['client', 'server']);
-  api.add_files('type-checking.coffee', ['client', 'server']);
+  name: 'zaku:type-checking',
+  summary: 'type-checking for string, number, function and array.',
+  version: '0.1.0',
+  git: 'https://github.com/tamino-martinius/meteor-type-checking.git'
 });
 
-Package.on_test(function (api) {
+Package.onUse(function (api) {
+  api.use('coffeescript', ['client', 'server']);
+  api.addFiles('type-checking.coffee', ['client', 'server']);
+});
+
+Package.onTest(function (api) {
   api.use([
+    'zaku:type-checking',
     'coffeescript',
-    'type-checking',
     'test-helpers',
     'tinytest'
   ], ['client', 'server']);
-  api.add_files('type-checking-test.coffee', ['client', 'server']);
+  api.addFiles('type-checking-test.coffee', ['client', 'server']);
 });
