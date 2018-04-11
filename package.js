@@ -6,7 +6,7 @@ Package.describe({
 });
 
 Package.onUse(function (api) {
-  api.use('coffeescript', ['client', 'server']);
+  api.use('coffeescript@1.0.17', ['client', 'server']);
   api.addFiles('type-checking.coffee', ['client', 'server']);
 });
 
